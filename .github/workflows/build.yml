@@ -5,8 +5,16 @@ on:
   - pull_request
 
 jobs:
-  install:
-    runs-on: ubuntu-latest
+
+  example_matrix:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        
+    runs-on: ${{ matrix.os }}
+    
+  web:
+    runs-on: ${{ matrix.os }}
 
     steps:
       - uses: actions/checkout@v2
@@ -17,4 +25,6 @@ jobs:
 
       - name: Install deps
         run: pnpm install
-
+      
+      - name: Build 
+        run: pnpm build
