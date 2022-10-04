@@ -14,5 +14,8 @@
   },
   "dependencies": {
     "@astrojs/cloudflare": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=12.22.0"
   }
 }
