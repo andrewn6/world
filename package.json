@@ -10,10 +10,18 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "astro": "^1.1.1"
+    "@astrojs/react": "^1.1.4",
+    "astro": "^1.1.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^2.1.0"
+    "@astrojs/cloudflare": "^2.1.0",
+    "@astrojs/tailwind": "^2.0.2",
+    "react-icons": "^4.4.0",
+    "react-tippy": "^1.4.0",
+    "tailwindcss": "^3.0.24",
+    "use-sound": "^4.0.1"
   },
   "engines": {
     "node": ">=12.22.0"
