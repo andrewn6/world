@@ -1,12 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import {age} from '../utils/time';
+import {HiOutlineLocationMarker} from 'react-icons/hi';
 ---
 
 <Layout title="Andrew Nijmeh">
 	<main>
 		<h1>Andrew Nijmeh</h1>
-		<nobr><p>I'm a ~{age.toPrecision(4)} yr old software engineer & <a href="https://en.wikipedia.org/wiki/Hacker_culture#Definition"> hacker </a> from Toronto, Ontario. </p></nobr>
+
+		<nobr><p>I'm a ~{age.toPrecision(5)} yr old software engineer & <a href="https://en.wikipedia.org/wiki/Hacker_culture#Definition"> hacker </a> from Toronto, Ontario. </p></nobr>
 
 		<nobr>
 		<p>
@@ -22,7 +24,7 @@ import {age} from '../utils/time';
 
 <style>
 	* {
-  		margin: 0
+  		margin: 10;
 	}
 
 	h1 {
