@@ -1,5 +1,6 @@
-#`website`
+# https://nijmeh.cloud
 
+Hi there! this is my personal website built with (Astro)[https://astro.build]
 
 ## 📁 Folder Layout
 ```
