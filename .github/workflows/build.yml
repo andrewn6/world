@@ -10,8 +10,6 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
-        
-    runs-on: ${{ matrix.os }}
     
   web:
     runs-on: ${{ matrix.os }}
