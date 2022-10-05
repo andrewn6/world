@@ -18,7 +18,7 @@ jobs:
             version: 6.0.2
 
         - name: Install dependencies
-          run: pnpm installl
+          run: pnpm install
         
         - name: Run rome format
           run: pnpm format
