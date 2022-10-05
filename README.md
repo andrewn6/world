@@ -1,6 +1,6 @@
 # https://nijmeh.cloud
 
-Hi there! this is my personal website built with (Astro)[https://astro.build]
+Hi there! this is my personal website built with [Astro](https://astro.build)
 
 ## 📁 Folder Layout
 ```
@@ -20,7 +20,7 @@ Hi there! this is my personal website built with (Astro)[https://astro.build]
 
 All commands are run from the root of the project, from a terminal:
 
-*just a note I use pnpm, you may want to go install that (here)[https://pnpm.io/].*
+*just a note I use pnpm, you may want to go install that [here](https://pnpm.io).*
 
 | Command                | Action                                             |
 | :--------------------- | :------------------------------------------------- |
