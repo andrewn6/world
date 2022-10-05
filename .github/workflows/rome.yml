@@ -1,0 +1,29 @@
+name: format
+
+
+on:
+  - push
+  - pull_request
+
+ jobs:
+    runs-on: ubuntu-latest
+
+    
+    format:
+
+      steps:
+        - uses: actions/checkout@v2
+
+        - uses: pnpm/action-setup@v2.2.2
+          with:
+            version: 6.0.2
+
+        - uses: rome/setup-rome@v0.1
+          with:
+             version: latest
+
+        - name: Install dependencies
+          run: pnpm installl
+        
+        - name: Run rome format
+          run: pnpm format

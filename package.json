@@ -7,13 +7,15 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "rome format ."
   },
   "devDependencies": {
     "@astrojs/react": "^1.1.4",
     "astro": "^1.1.1",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "rome": "^0.10.0-next"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^2.1.0",
