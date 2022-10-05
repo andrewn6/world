@@ -5,13 +5,11 @@ on:
   - pull_request
 
 jobs:
-
-  example_matrix:
+  web:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
     
-  web:
     runs-on: ${{ matrix.os }}
 
     steps:

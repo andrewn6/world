@@ -5,11 +5,10 @@ on:
   - push
   - pull_request
 
- jobs:
-    runs-on: ubuntu-latest
-
-    
-    format:
+jobs:
+    web:
+      name: format
+      runs-on: ubuntu-latest
 
       steps:
         - uses: actions/checkout@v2
