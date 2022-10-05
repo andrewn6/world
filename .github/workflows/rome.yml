@@ -17,7 +17,7 @@ jobs:
           with:
             version: 6.0.2
 
-        - uses: rome/setup-rome@v0.1
+        - uses: rome/setup-rome@v0.16.0
           with:
              version: latest
 
