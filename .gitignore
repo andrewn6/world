@@ -1,5 +1,5 @@
 # build output
-
+.dist
 .output/
 
 # dependencies
@@ -18,3 +18,4 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+.vercel
