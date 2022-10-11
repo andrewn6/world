@@ -1,7 +1,6 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-		"target": "es5",
-	  	"type": "module"
+		"target": "es5"
   }
 }

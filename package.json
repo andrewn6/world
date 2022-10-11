@@ -20,6 +20,10 @@
   "dependencies": {
     "@astrojs/tailwind": "^2.0.2",
     "@react-icons/all-files": "^4.1.0",
+    "autoprefixer": "^10.4.12",
+    "cssnano": "^5.1.13",
+    "postcss": "^8.4.17",
+    "postcss-nesting": "^10.2.0",
     "react-content-loader": "^6.2.0",
     "react-icons": "^4.4.0",
     "react-tippy": "^1.4.0",
