@@ -1,0 +1,15 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 error pnpm": {
+    "code": "ERR_PNPM_CANNOT_REMOVE_MISSING_DEPS",
+    "hint": "Available dependencies: @astrojs/react, astro, react, react-dom, rome, @astrojs/tailwind, react-icons, react-tippy, tailwindcss, use-sound",
+    "err": {
+      "name": "pnpm",
+      "message": "Cannot remove '@astrojs/vercel': no such dependency found",
+      "code": "ERR_PNPM_CANNOT_REMOVE_MISSING_DEPS",
+      "stack": "pnpm: Cannot remove '@astrojs/vercel': no such dependency found\n    at Object.handler (/Users/andrew/.npm-global/lib/node_modules/pnpm/dist/pnpm.cjs:123174:15)\n    at async /Users/andrew/.npm-global/lib/node_modules/pnpm/dist/pnpm.cjs:182575:21\n    at async run (/Users/andrew/.npm-global/lib/node_modules/pnpm/dist/pnpm.cjs:182549:34)\n    at async runPnpm (/Users/andrew/.npm-global/lib/node_modules/pnpm/dist/pnpm.cjs:182768:5)\n    at async /Users/andrew/.npm-global/lib/node_modules/pnpm/dist/pnpm.cjs:182760:7"
+    }
+  }
+}

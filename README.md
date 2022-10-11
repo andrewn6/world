@@ -30,3 +30,7 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm run preview`      | Preview your build locally, before deploying       |
 | `pnpm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
 | `pnpm run astro --help` | Get help using the Astro CLI                       |
+
+## Credits
+
+https://cnrad.dev for the technology list grid
