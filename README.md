@@ -33,4 +33,4 @@ All commands are run from the root of the project, from a terminal:
 
 ## Credits
 
-[Conrad](https://cnrad.dev for the technology grid list.
+[Conrad](https://cnrad.dev) for the technology grid list.
