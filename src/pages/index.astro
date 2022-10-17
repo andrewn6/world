@@ -16,20 +16,22 @@ import {
     SiPython,
     SiPrisma,
 } from "react-icons/si/index.js";
+import { Navbar } from "../components/Navbar";
 import { TiLocationArrowOutline } from "@react-icons/all-files/ti/TiLocationArrowOutline"
 ---
 
 <Layout title="Andrew Nijmeh">
 	<main>
         
-        <h3 class="text-white-800 flex dark:text-gray-30 float-right items-center w-full leading-6 tracking wide mb-12"><TiLocationArrowOutline/> Toronto, ON.</h3>
+        <h3 class="text-white-700 flex dark:text-gray-30 float-right items-center w-full leading-6 tracking wide mb-12"><TiLocationArrowOutline/> Toronto, ON.</h3>
 		<h1 class="mt-5 font-bold text-left text-4xl md:text-5xl mb-4">hey, I'm Andrew 👋.</h1>
         
-		<p class="text-white-800 dark:text-gray-300 leading-6 tracking-wide mb-12">I'm a 14 year old <a href="https://en.wikipedia.org/wiki/Hacker_culture#Definition">hacker</a> & software engineer from Toronto. I am passionate about software engineering,
+        <Navbar />
+		<p class="text-white-800 dark:text-gray-300 leading-6 tracking-wide mb-12">I am a <a href="https://en.wikipedia.org/wiki/Hacker_culture#Definition">hacker</a> & software engineer from Toronto, Ontario, Canada. I am passionate about software engineering,
             cloud, infrastructure & bitcoin.</p>	
 
 		<h3 class="font-medium text-3xl mb-4">Technologies 💻</h3>
-		<div class="w-full flex flex-wrap flex-row justify-center p-1 border border-slate-800 rounded-md bg-white/10 dark:bg-blue/10 mb-12">
+		<div class="w-full flex flex-wrap flex-row justify-center p-1 border border-slate-800 rounded-md bg-white/10 dark:bg-white/10 mb-12">
 			<TechItem icon={SiTypescript} name="TypeScript" />
 			<TechItem icon={SiReact} name="React" />
 			<TechItem icon={SiKubernetes} name="Kubernetes" />
@@ -63,8 +65,7 @@ import { TiLocationArrowOutline } from "@react-icons/all-files/ti/TiLocationArro
 
     h3 {
         color: #ccc;
-        margin-bottom: 0;
-        svg { color: #7777ff }
+        margin-bottom: 10;
     }
 
     main {
