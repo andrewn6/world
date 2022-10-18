@@ -3863,6 +3863,7 @@ dependencies = [
  "prisma-client-rust",
  "prisma-client-rust-cli",
  "rocket",
+ "serde",
 ]
 
 [[package]]
