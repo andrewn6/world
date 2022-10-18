@@ -1,19 +1,20 @@
-FROM node:lts as dependencies
-WORKDIR /web
-COPY package.json yarn.lock ./
-RUN yarn install
+FROM node:18-alpine
 
-FROM node:lts as builder
-WORKDIR /web
+RUN apk add curl
+
+RUN curl -fsSL "https://github.com/pnpm/pnpm/releases/latest/download/pnpm-linuxstatic-x64" -o /bin/pnpm; chmod +x /bin/pnpm;
+
+RUN mkdir -p /usr/src/web
+
+WORKDIR /usr/src/web
+
+COPY package.json .
+
 COPY . .
-RUN yarn build
 
-FROM node:lts as runner
-WORKDIR /web
-ENV NODE_ENV production
-COPY --from=builder /web/public ./public
-COPY --from=builder /web/node_modules ./node_modules
-COPY --from=builder /web/package.json ./package.json
+RUN pnpm install
 
 EXPOSE 3000
-CMD ["yarn", "start"]
+
+# Run
+CMD [ "pnpm", "start" ]

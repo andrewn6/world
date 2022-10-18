@@ -2,6 +2,4 @@
 
 pnpm install
 
-act
-
 pnpm dev
