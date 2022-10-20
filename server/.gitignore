@@ -1,3 +1,4 @@
-.env
-
-target/
+/target
+**/*.rs.bk
+/bin
+/pkg
