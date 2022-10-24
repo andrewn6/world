@@ -1,4 +1,4 @@
-FROM rust:latest
+FROM rust:latest AS builder
 
 WORKDIR /usr/src/server
 
@@ -9,6 +9,7 @@ COPY . .
 
 RUN cargo build
 
-EXPOSE 8000
-
-CMD ["cargo", "run"]
+FROM scratch
+COPY --from=builder /usr/src/server .
+USER 1000
+CMD ["./server"]

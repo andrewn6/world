@@ -16,5 +16,4 @@ RUN pnpm install
 
 EXPOSE 3000
 
-# Run
 CMD [ "pnpm", "start" ]
