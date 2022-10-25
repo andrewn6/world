@@ -5,10 +5,10 @@ on:
   - pull_request
 
 jobs:
-  substore:
+  server:
     name: clippy
          
-    runs-on: ubuntu-22.04
+    runs-on: [ubuntu-22.04]
 
     steps:  
       - name: Checkout Repository
@@ -16,7 +16,7 @@ jobs:
       - name: Install rust toolchain
         uses: actions-rs/toolchain@v1
         with:
-          toolchain: stable
+          toolchain: nightly
           components: clippy
 
       - name: Install deps
