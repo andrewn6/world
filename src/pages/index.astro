@@ -3,14 +3,16 @@ import Layout from '../layouts/Layout.astro';
 import { TiLocationArrowOutline } from "@react-icons/all-files/ti/TiLocationArrowOutline"
 import { AiOutlineClockCircle } from "@react-icons/all-files/ai/AiOutlineClockCircle"
 import { SiEthereum } from "@react-icons/all-files/si/SiEthereum"
+import { MdOutlineMailOutline } from "react-icons/md"
 ---
 
 <Layout title="Andrew Nijmeh">
 	<main>
         
         <h3 class="text-white-700 flex dark:text-gray-30 float-right items-center w-full leading-6 tracking wide"><TiLocationArrowOutline/> Toronto, ON.</h3>
-        <h3 class="text-white-700 flex dark:text-gray-30 float-right items-center w-full leading-6 tracking wide "><AiOutlineClockCircle/> <span id="time"></span></h3>
-        <h3 class="text-white-700 flex dark:text-gray-30 float-right items-center w-full leading-6 tracking wide mb-8"><SiEthereum/><a href="https://app.ens.domains/name/nijmeh.eth/details">nijmeh.eth</a></h3>
+        <h3 class="text-white-700 flex dark:text-gray-30 float-right items-center w-full leading-6 tracking wide"> <AiOutlineClockCircle/> It is currently<span id="time"></span></h3>
+        <h3 class="text-white-700 flex dark:text-gray-30 float-right items-center w-full leading-6 tracking wide"> <SiEthereum/> <a href="https://app.ens.domains/name/nijmeh.eth/details"> nijmeh.eth</a></h3>
+        <h3 class="text-white-700 flex dark:text-gray-30 float-right items-center w-full leading-6 tracking wide mb-8"> <MdOutlineMailOutline/> <a href="mailto:andrew@nijmeh.cloud"> andrew@nijmeh.cloud</a></h3>
 
 		<h1 class="mt-5 font-bold text-left text-4xl md:text-5xl mb-4">hey, I'm Andrew <span class="blog-title-emoji">👋</span></h1>
 		<p class="text-white-800 dark:text-gray-300 leading-6 tracking-wide mb-12">I'm a <a href="https://en.wikipedia.org/wiki/Hacker_culture#Definition">hacker</a> & software engineer from Toronto, Ontario, Canada. I am passionate about software engineering,
@@ -48,10 +50,10 @@ import { SiEthereum } from "@react-icons/all-files/si/SiEthereum"
     let date = formattedDate();
     let el = document.querySelector('#time');
 
-    el.innerHTML = date;
+    el.innerHTML = ' ' + date;
     setInterval(()=>{
         date = formattedDate();
-        el.innerHTML = date;
+        el.innerHTML = ' ' + date;
     }, 1000)
 </script>
 
@@ -72,6 +74,7 @@ import { SiEthereum } from "@react-icons/all-files/si/SiEthereum"
     h3 {
         color: #ccc;
         margin-bottom: 10;
+        white-space: pre;
     }
 
     main {
@@ -99,6 +102,10 @@ import { SiEthereum } from "@react-icons/all-files/si/SiEthereum"
         display: inline-block;
     }
 
+    svg {
+        margin-right: 4px;
+        display: block;
+    }
 
     @keyframes wave-animation {
         0% {
