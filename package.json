@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "rome format ."
+    "rome:format": "rome format .",
+    "prettier:format": "prettier --write ."
   },
   "devDependencies": {
     "@astrojs/react": "^1.1.4",
@@ -25,6 +26,8 @@
     "cssnano": "^5.1.13",
     "postcss": "^8.4.17",
     "postcss-nesting": "^10.2.0",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.7.0",
     "react-content-loader": "^6.2.0",
     "react-icons": "^4.6.0",
     "react-tippy": "^1.4.0",
