@@ -1,8 +1,0 @@
-[package]
-name = "server"
-version = "0.0.1"
-edition = "2021"
-description = "serverless api for nijmeh.cloud"
-
-[dependencies]
-actix-web = "4"
