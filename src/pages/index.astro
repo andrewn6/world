@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
 import { TiLocationArrowOutline } from "@react-icons/all-files/ti/TiLocationArrowOutline"
 import { AiOutlineClockCircle } from "@react-icons/all-files/ai/AiOutlineClockCircle"
 import { SiEthereum } from "@react-icons/all-files/si/SiEthereum"
@@ -17,6 +20,7 @@ import { MdOutlineMailOutline } from "react-icons/md/index.js"
 		<h1 class="mt-5 font-bold text-left text-4xl md:text-5xl mb-4">hey, I'm Andrew <span class="blog-title-emoji">👋</span></h1>
 		<p class="text-white-800 dark:text-gray-300 leading-6 tracking-wide mb-12">I'm a <a href="https://en.wikipedia.org/wiki/Hacker_culture#Definition">hacker</a> & software engineer from Toronto, Ontario, Canada. I am passionate about software engineering,
             cloud & software infrastructure. </p>	
+
 		<h3 class="font-bold text-3xl mb-4">experience</h3>
         <p class="text-white-800 dark:text-gray-300 leading-6 tracking-wide mb-12">
             I have been programming for almost 4 years. I've gained experience in a variety of languages and tools. 
@@ -84,7 +88,7 @@ import { MdOutlineMailOutline } from "react-icons/md/index.js"
 
     main {
         margin: 0 auto;
-        padding: 1em;
+        padding: 1em;;
         max-width: 60ch;
     }
 
@@ -97,14 +101,6 @@ import { MdOutlineMailOutline } from "react-icons/md/index.js"
           color: #ccc;
           max-width: 60ch;
           margin-top: 0px;
-    }
-
-    div.seperator {
-        height: 30px;
-        width: 1px;
-        background: white;
-        opacity: 0.3;
-        margin: 2px 5px;
     }
 
     .blog-title-emoji {
