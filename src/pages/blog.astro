@@ -1,11 +1,10 @@
 ---
+import Layout from '../layouts/Layout.astro';
 const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
 );
 ---
-
-<!DOCTYPE html>
-<html lang="en">
+<Layout title="Andrew Nijmeh">
 	<head>
 		<style>
 			ul {
@@ -23,6 +22,43 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 			ul li a:visited {
 				color: #8e32dc;
 			}
+
+			h1 {
+       		 	color: #ccc;
+        		text-align: center;
+        		margin-bottom: 2rem;
+        		margin-top: 20px;
+        		height: min-content
+    		}
+
+    		h2 {
+        		color: #ccc;
+        		margin-top: 20px;
+    		}
+
+    		h3 {
+        		color: #ccc;
+        		margin-bottom: 10;
+        		white-space: pre;
+    		}
+
+    		main {
+        		margin: 0 auto;
+        		padding: 1em;
+        		max-width: 60ch;
+    		}
+
+    		a {
+          		color: #7777ff;
+          		text-decoration: none;
+    		}
+    
+    		p {
+          		color: #ccc;
+          		max-width: 60ch;
+          		margin-top: 0px;
+    		}
+
 		</style>
 	</head>
 	<body>
@@ -45,4 +81,4 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 			</section>
 		</main>
 	</body>
-</html>
+</Layout>
