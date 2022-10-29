@@ -1,5 +1,6 @@
 [workspace]
 
 members = [
-    "github-stats"
+    "analytics",
+    "cdn"
 ]
