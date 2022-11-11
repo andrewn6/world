@@ -2,21 +2,12 @@
 
 Hi there! this is my personal website built with [Astro](https://astro.build)
 
-## 📁 Folder Layout
-
-```
-/
-├── public/
-│   └── any assets/images
-├── src/
-│   ├── components/
-│   │   └── any astro/react components for my website go here
-│   ├── layouts/
-│   │   └── the layout
-│   └── pages/
-│       └── the pages of my website (in .md or .astro)
-└── package.json (self explanatory)
-```
+## 📚 Stack
+The stack consists of the following:
+- Astro (Frontend)
+- Rust (API)
+- Cloudflare (DNS)
+- Cloudflare Pages (Deployment)
 
 ## 🧞 Commands
 
