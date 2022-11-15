@@ -1,4 +1,4 @@
-use actix_web::{get, post, delete, web::{self, PayloadConfig}, App, HttpResponse, HttpServer. Responder, Error, HttpRequest};
+use actix_web::{get, post, delete, web::{self, PayloadConfig}, App, HttpResponse, HttpServer, Responder, Error, HttpRequest};
 
 #[get("/")]
 async fn greetings() -> impl Responder {
