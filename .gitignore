@@ -13,6 +13,8 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# air
+tmp/
 
 # environment variables
 .env
