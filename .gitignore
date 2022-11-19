@@ -22,4 +22,7 @@ pnpm-debug.log*
 .DS_Store
 .vercel
 
+# stupid cache thingy
+.idea
+
 dist/
