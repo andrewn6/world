@@ -16,6 +16,8 @@ import (
 
 func setupRoutes(app *fiber.App) {
   app.Get("/ping", routes.Ping)
+  app.Post("/upload", routes.Upload)
+  app.Delete("/delete", routes.Delete)
 }
 
 func main() {
@@ -47,7 +49,6 @@ func main() {
     fmt.Println(err.Error())
   }
   
-
   app := fiber.New()
 
   setupRoutes(app)
