@@ -3,7 +3,7 @@ name: clippy
 on:
   - push
   - pull_request
-
+ 
 jobs:
   server:
     name: clippy

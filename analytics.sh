@@ -6,7 +6,4 @@ printf "${GREEN} Running my analytics service...\n"
 
 cd analytics
 
-
-cargo build
-
-cargo run
+go run main.go
