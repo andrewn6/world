@@ -12,8 +12,8 @@
     "prettier:format": "prettier --write ."
   },
   "devDependencies": {
-    "@astrojs/react": "^1.1.4",
     "@astrojs/mdx": "^0.11.5",
+    "@astrojs/react": "^1.1.4",
     "astro": "^1.1.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -26,6 +26,7 @@
     "astro-tooltips": "^0.6.0",
     "autoprefixer": "^10.4.12",
     "cssnano": "^5.1.13",
+    "gruvbox.css": "^0.0.4",
     "postcss": "^8.4.17",
     "postcss-nesting": "^10.2.0",
     "prettier": "^2.7.1",
