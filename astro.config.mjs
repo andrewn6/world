@@ -5,6 +5,6 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://nijmeh.cloud',
+  site: "https://nijmeh.cloud",
   integrations: [react(), tailwind(), mdx()],
 });

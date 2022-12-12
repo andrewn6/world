@@ -20,7 +20,7 @@ type File struct {
 func uploadFile(s *session.Session, ctx *fiber.Ctx) (string *JSONResponse) {
 	Header, err := ctx.FormFile("file")
 	if err != nil {
-		return "", NewResponse(fiber.StatusInternalServerError, "Failed to get uploaded file")
+		return "", utils.NewResponse(fiber.StatusInternalServerError, "Failed to get uploaded file")
 	}
 
 	size := Header.Size

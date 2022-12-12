@@ -3,7 +3,9 @@
 Hi there! this is my personal website built with [Astro](https://astro.build)
 
 ## 📚 Stack
+
 The stack consists of the following:
+
 - Astro (Frontend)
 - Static CDN (Go)
 - Analytics (Go)
