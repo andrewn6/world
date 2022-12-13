@@ -5,11 +5,11 @@ import (
   "fmt"
   "os"
   "github.com/joho/godotenv"
-  "github.com/cloudflare/cloudflare-go"
+  "github.com/cloudflare/cloudflare-go/v2/cloudflare"
 )
 
 func main () {
   app := fiber.New()
 
-  cf, err := cloudflare.New(os.Getenv("CLOUDFLARE_R2_TOKEN"), os.Getenv("CLOUDFLARE_API_EMAIL"))
+  cf, err := cloudflare.New(os.Getenv("api_key"), "email")
 }
