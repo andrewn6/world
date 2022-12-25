@@ -21,7 +21,7 @@ import { age } from '../utils/time'
         <h3 class="text-white-700 flex dark:text-gray-30 float-right items-center w-full leading-6 tracking wide mb-8"> <SiGithubsponsors/> <a href="https://github.com/sponsors/anddddrew"> GitHub Sponsors</a></h3>
     <img src="/headshot.jpg" alt="Headshot" width="80" height="90">
 		<h1 class="mt-5 font-extrabold text-left text-4xl md:text-5xl mb-4">hey, I'm Andrew <span class="blog-title-emoji">👋</span></h1>
-		<p class="text-white-800 dark:text-gray-300 leading-6 tracking-wide mb-12">I'm a <span>{age.toPrecision(10)}</span> year old <a href="https://en.wikipedia.org/wiki/Hacker_culture#Definition">hacker</a> & software engineer from Toronto, Ontario, Canada. I am passionate about software engineering,
+		<p class="text-white-800 dark:text-gray-300 leading-6 tracking-wide mb-12">I'm a <span id="age"></span> year old <a href="https://en.wikipedia.org/wiki/Hacker_culture#Definition">hacker</a> & software engineer from Toronto, Ontario, Canada. I am passionate about software engineering,
             cloud & software infrastructure. </p>	
 
 		<h3 class="font-extrabold text-3xl mb-4">experience</h3>
@@ -67,6 +67,21 @@ import { age } from '../utils/time'
         date = formattedDate();
         el.innerHTML = ' ' + date;
     }, 1000)
+
+
+    function calculateAge() {
+        const birth = Date.parse(new Date('1 June 2008 12:00 EST').toString());
+        const msSinceBirth = Date.parse(Date()) - birth;
+        return msSinceBirth / 1000 / 60 / 60 / 24 / 365;
+      }
+
+      function updateAge() {
+        const ageElement = document.getElementById('age');
+        ageElement.innerHTML = calculateAge();
+      }
+
+      setInterval(updateAge, 1000);
+
 </script>
 
 <style>
