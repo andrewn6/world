@@ -9,7 +9,6 @@ import { SiEthereum } from "@react-icons/all-files/si/SiEthereum"
 import { MdOutlineMailOutline } from "react-icons/md/index.js"
 import { SiGithubsponsors } from "react-icons/si/index.js"
 import Snowfall from "../components/Snowfall"
-import { age } from '../utils/time'
 ---
 
 <Layout title="Andrew Nijmeh">
@@ -77,11 +76,12 @@ import { age } from '../utils/time'
 
       function updateAge() {
         const ageElement = document.getElementById('age');
-        ageElement.innerHTML = calculateAge();
+        ageElement.innerHTML = calculateAge().toFixed(7)
+        window.requestAnimationFrame(updateAge)
       }
 
-      setInterval(updateAge, 1000);
-
+      window.requestAnimationFrame(updateAge)
+      
 </script>
 
 <style>
