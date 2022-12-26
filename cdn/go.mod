@@ -3,19 +3,15 @@ module nijmeh.cloud
 go 1.19
 
 require (
-	github.com/aws/aws-sdk-go v1.44.142
+	github.com/cloudflare/cloudflare-go v0.56.0
 	github.com/gofiber/fiber/v2 v2.40.1
 )
 
 require (
 	github.com/andybalholm/brotli v1.0.4 // indirect
-	github.com/cloudflare/cloudflare-go v0.56.0 // indirect
-	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect
 	github.com/hashicorp/go-retryablehttp v0.7.1 // indirect
-	github.com/jmespath/go-jmespath v0.4.0 // indirect
-	github.com/joho/godotenv v1.4.0 // indirect
 	github.com/klauspost/compress v1.15.13 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.16 // indirect
