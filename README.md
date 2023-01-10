@@ -1,6 +1,6 @@
 # nijmeh.cloud
 
-hi this is my website written in Astro
+Hi this is my website written in Astro
 
 my [cdn](https://cdn.nijmeh.cloud) is written in Go using the cloudflare SDK to upload and delete files.
 
