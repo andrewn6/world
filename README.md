@@ -10,3 +10,4 @@ the analytics pull various data like my apple music stats, github stats and some
 
 - alistair.sh for inspo & the age thingy
 - phin.dev - general inspo
+- pineapplerind.xyz (@PineappleRind) for tons of help and bug fixes
