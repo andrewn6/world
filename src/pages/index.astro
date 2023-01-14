@@ -10,46 +10,48 @@ import { MdOutlineMailOutline } from "react-icons/md/index.js"
 import { SiGithubsponsors } from "react-icons/si/index.js"
 import { AiOutlineHeart } from "react-icons/ai/index.js"
 import Snowfall from "../components/Snowfall"
+
+import Lanyard  from '../components/Lanyard.svelte';
 ---
 
 <Layout title="Andrew Nijmeh">
   <Snowfall />
 	<main>
-        <h3 class="text-white-700 flex dark:text-gray-30 float-right items-center w-full leading-6 tracking wide hidden"> <AiOutlineClockCircle/><span id="time"></span></h3>
-        <h3 class="text-white-700 flex dark:text-gray-30 float-right items-center w-full leading-6 tracking wide hidden"> <SiEthereum/> <a href="https://app.ens.domains/name/nijmeh.eth/details"> nijmeh.eth</a></h3>
-        <h3 class="text-white-700 flex dark:text-gray-30 float-right items-center w-full leading-6 tracking wide hidden"> <MdOutlineMailOutline/> <a href="mailto:andrew@nijmeh.cloud"> andrew@nijmeh.cloud</a></h3>
-        <h3 class="text-white-700 flex dark:text-gray-30 float-right items-center w-full leading-6 tracking wide mb-8 hidden"> <SiGithubsponsors/> <a href="https://github.com/sponsors/anddddrew"> GitHub Sponsors</a></h3>
+        <h3 class="text-white-700 flex dark:text-gray-30 float-right items-center w-full leading-6 tracking wide"> <AiOutlineClockCircle/><span id="time"></span></h3>
+
+        <h3 class="text-white-700 flex dark:text-gray-30 float-right items-center w-full leading-6 tracking wide"> <SiEthereum/> <a href="https://app.ens.domains/name/nijmeh.eth/details"> nijmeh.eth</a></h3>
+        <h3 class="text-white-700 flex dark:text-gray-30 float-right items-center w-full leading-6 tracking wide"> <MdOutlineMailOutline/> <a href="mailto:andrew@nijmeh.cloud"> andrew@nijmeh.cloud</a></h3>
+        <h3 class="text-white-700 flex dark:text-gray-30 float-right items-center w-full leading-6 tracking wide mb-8"> <SiGithubsponsors/> <a href="https://github.com/sponsors/anddddrew"> GitHub Sponsors</a></h3>
     <img src="/headshot.jpg" alt="Headshot" width="80" height="90">
-		<h1 class="mt-5 font-extrabold text-left text-4xl md:text-5xl mb-4">hey, I'm Andrew <span class="blog-title-emoji hidden">👋</span></h1>
-		<p class="text-white-800 dark:text-gray-300 leading-6 tracking-wide mb-12 hidden">I'm a <b><span id="age"></span> year old</b> <a href="https://en.wikipedia.org/wiki/Hacker_culture#Definition">hacker</a> & <i>software engineer</i> from Toronto, Ontario, Canada. I am passionate about software engineering,
+		<h1 class="mt-5 font-extrabold text-left text-4xl md:text-5xl mb-4">hey, I'm Andrew <span class="blog-title-emoji">👋</span></h1>
+		<p class="text-white-800 dark:text-gray-300 leading-6 tracking-wide mb-12">I'm a <b><span id="age"></span> year old</b> <a href="https://en.wikipedia.org/wiki/Hacker_culture#Definition">hacker</a> & <i>software engineer</i> from Toronto, Ontario, Canada. I am passionate about software engineering,
             cloud & software infrastructure. </p>	
-		<h3 class="font-extrabold text-3xl mb-4 hidden">experience</h3>
-        <p class="text-white-800 dark:text-gray-300 leading-6 tracking-wide mb-12 hidden">
+		<h3 class="font-extrabold text-3xl mb-4 ">experience</h3>
+        <p class="text-white-800 dark:text-gray-300 leading-6 tracking-wide mb-12">
             I have been programming for almost 4 years. I've gained experience in a variety of languages and tools. 
             I have worked on small personal projects, to enterprise products at companies.
         </p>
 
-        <h3 class="font-extrabold text-3xl mb-4 hidden">tech</h3>
-        <p class="text-white-800 dark:text-gray-300 leading-6 tracking-wide mb-12 hidden">
+        <h3 class="font-extrabold text-3xl mb-4">tech</h3>
+        <p class="text-white-800 dark:text-gray-300 leading-6 tracking-wide mb-12">
             I have tinkered with a bunch of different languages and tools, However I am most experienced w/ <a href="https://docker.com">docker</a>, <a href="https://python.org">python</a>, <a href="https://typescriptlang.org">typescript</a>, <a href="https://rust-lang.org">rust</a>, & <a href="https://reactjs.org/">react</a>. 
             I am also familiar with cloud computing + DevOps tools like <a href="https://terraform.io">terraform</a>, <a href="https://en.wikipedia.org/wiki/CI/CD">ci/cd</a> & <a href="https://kubernetes.io">kubernetes</a>.
         </p>
-
-        <h3 class="font-extrabold text-3xl mb-4 hidden">contact</h3>
+        <Lanyard />
+        <h3 class="font-extrabold text-3xl mb-4 ">contact</h3>
         <p class="text-white-800 dark:text-gray-300 leading-6 tracking-wide mb-12">
            If you have any cool ideas or just want to say hi, feel free to reach out to me via <a href="https://www.linkedin.com/in/andrew-nijmeh-1a6726200/">linkedin</a>, alternatively you can message me on <a href="https://twitter.com/0xnijmeh">twitter</a>.
         </p>
 
         <footer class="mx-auto mt-20 max-w-3xl border-t-2 border-neutral-900/10 p-4 py-10 opacity-50 dark:border-white/10">
               <i><p>Andrew Nijmeh • {new Date().getFullYear()} Handcrafted with ♡ from Toronto, Ontario.</p></i>
-							</footer>
-
+		</footer>
 	</main>
 
 </Layout>
 
 <script>
-
+    
     function formattedDate() {
         return new Date().toLocaleString('en-US', {
             timeZone: 'America/New_York',
@@ -84,11 +86,7 @@ import Snowfall from "../components/Snowfall"
 
       window.requestAnimationFrame(updateAge)
       
-      for (const [i, element] of document.querySelectorAll('.hidden').entries()) {
-        setTimeout(() => {
-          element.classList.remove('hidden')
-        }, i * 100)
-      }
+      
 </script>
 
 <style>
@@ -98,12 +96,6 @@ import Snowfall from "../components/Snowfall"
         margin-bottom: 2rem;
         margin-top: 20px;
         height: min-content
-    }
-
-    .hidden {
-        opacity: 0;
-        transition: 0.3s!important;
-        transform: translateY(5px);
     }
 
     h2 {
