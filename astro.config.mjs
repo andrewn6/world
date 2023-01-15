@@ -9,5 +9,5 @@ import svelte from "@astrojs/svelte";
 // https://astro.build/config
 export default defineConfig({
   site: "https://nijmeh.cloud",
-  integrations: [react(), tailwind(), mdx(), svelte()]
+  integrations: [react(), tailwind(), mdx(), svelte()],
 });
