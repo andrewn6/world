@@ -43,4 +43,4 @@ jobs:
 
       - name: Build CDN
         working-directory: ./cdn
-        run: go build
+        run: go mod tidy
