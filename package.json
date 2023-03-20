@@ -28,6 +28,7 @@
     "astro-tooltips": "^0.6.0",
     "autoprefixer": "^10.4.12",
     "cssnano": "^5.1.13",
+    "cursor-effects": "^1.0.11",
     "framer-motion": "^8.0.2",
     "gruvbox.css": "^0.0.4",
     "postcss": "^8.4.17",
