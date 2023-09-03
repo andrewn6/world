@@ -4,7 +4,7 @@ export const title = "Andrew N"
 ---
 
 <Layout {title}>
-    <h1 class="heading">Andrew N</h1>
+    <h1 class="heading">Andrew Nijmeh</h1>
 
     <p>
         <a href="https://twitter.com/nijmehvm" class="link">Twitter</a>
@@ -12,9 +12,12 @@ export const title = "Andrew N"
         <a href="https://www.linkedin.com/in/andrew-nijmeh-1a6726200/" class="link">Linkedin</a>
     </p>
 
-    <p>I'm Andrew, a software developer based in Canada 🇨🇦. Currently, I'm currently working at <a href="https://dimension.dev" class="link">Dimension</a> working on <a href="https://github.com/dimensionhq/infralink" class="link"> Infralink</a> which is our open source cloud agnostic container orchestrator tool.</p>
+    <p>software engineering, infra & systems.</p>
 
-    <p>I mainly write Rust but I also have experience with Python, TypeScript & Go.</p>
+    <audio autoplay id="myAudio">
+        <source src="./audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 </Layout>
 
 <style>
@@ -45,3 +48,16 @@ export const title = "Andrew N"
         background-color: #e0b02a;
     }
 </style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const audio = document.getElementById("myAudio") as HTMLAudioElement;
+
+        if (audio) {
+            // Listen for the "ended" event and pause the audio
+            audio.addEventListener("ended", function() {
+                audio.pause();
+            });
+        }
+    });
+</script>
