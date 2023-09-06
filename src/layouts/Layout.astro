@@ -1,0 +1,58 @@
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" type="image/svg+xml" href="/headshot.jpg" />
+	<meta name="twitter:card" content="https://user-images.githubusercontent.com/59238070/209602858-215a81df-88b7-44e1-ab96-370671cb5f55.png"/>
+	<meta content="Andrew N" name='description'>
+	<title>Andrew N</title>
+  </head>
+  <body>
+	<slot></slot>
+  </body>
+  </html>
+  <style>
+	 @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+  
+	:root {
+	  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+	  --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
+	  --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  
+	  --color-text: hsl(12, 5%, 4%);
+	  --color-bg: #F5F3EB;
+	  --color-border: hsl(17, 24%, 90%);
+	}
+  
+	html {
+	  font-family: 'Karla', serif;
+	  font-size: var(--font-size-base);
+	  color: var(--color-text);
+	  background-color: var(--color-bg);
+	  overflow-x: hidden; /* Prevent horizontal scroll */
+	}
+  
+	* {
+	  box-sizing: border-box;
+	}
+  
+	body {
+	  margin: 0;
+	  padding: 0;
+	  overflow: auto;
+	  webkit-overflow-scrolling: touch;
+	  height: 100vh;
+	}
+  
+	:global(h1) {
+	  font-size: var(--font-size-xl);
+	}
+  
+	:global(h2) {
+	  font-size: var(--font-size-lg);
+	}
+  </style>
+  
