@@ -14,10 +14,11 @@ export const title = "Andrew N"
 
     <p>software engineering, infra & systems.</p>
 
-    <audio autoplay id="myAudio">
-        <source src="./audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+    <p>currently building <a href="https://glist.ai">glist</a>, leveraging AI to make traffic engineering more efficient</p>
+
+    <audio id="foo" preload="auto">
+        <source src="./audio.wav" type="audio/wav">
+      </audio>
 </Layout>
 
 <style>
@@ -28,6 +29,8 @@ export const title = "Andrew N"
         margin-bottom: 10px;
         margin-left: 3%;
     }
+
+    #foobar { display: none }
 
     p {
         color: #1c1c1b;
@@ -50,14 +53,6 @@ export const title = "Andrew N"
 </style>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const audio = document.getElementById("myAudio") as HTMLAudioElement;
-
-        if (audio) {
-            // Listen for the "ended" event and pause the audio
-            audio.addEventListener("ended", function() {
-                audio.pause();
-            });
-        }
-    });
+    var sample = document.getElementById("foo") as HTMLAudioElement;
+    sample.play();
 </script>
