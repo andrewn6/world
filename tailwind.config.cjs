@@ -1,7 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: ["./src/**/*.{astro,html,md,ts}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['"Inter"', 'system-ui', '-apple-system', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+      },
+      colors: {
+        ink: '#111',
+        faint: '#888',
+      },
+    },
   },
 };

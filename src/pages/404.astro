@@ -1,26 +1,13 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="404 | Page not found">
-    <main>
-        <h2 class="mt-5 font-extrabold text-left text-4xl md:text-5xl mb-4">404 | Page not found!</h1>
-    </main>
+<Layout title="404">
+  <div class="py-20">
+    <p class="font-mono text-sm text-faint">404</p>
+    <h1 class="mt-2 text-2xl font-semibold tracking-tight">Page not found</h1>
+    <a href="/" class="inline-block mt-6 text-sm border-b border-neutral-300 hover:border-ink transition-colors">
+      Back home
+    </a>
+  </div>
 </Layout>
-
-<style>
-    h2 {
-        color: rgb(157, 190, 130);
-        text-align: center;
-        margin-bottom: 2rem;
-        margin-top: 20px;
-        height: min-content;
-    }
-
-    main {
-        margin: 0 auto;
-        padding: 1em;
-        max-width: 60ch;
-    }
-
-</style>

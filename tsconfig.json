@@ -1,7 +1,3 @@
 {
-  "extends": "astro/tsconfigs/base",
-  "include": ["./src/**/*.ts"],
-  "compilerOptions": {
-    "target": "ESNext"
-  }
+  "extends": "astro/tsconfigs/strict"
 }

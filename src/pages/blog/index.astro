@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<Layout title="Writing — Andrew N">
+  <div>
+    <h1 class="text-2xl font-semibold tracking-tight" style="letter-spacing: -0.025em;">Writing</h1>
+
+    {posts.length === 0 && (
+      <p class="mt-8 text-faint text-sm">Nothing here yet.</p>
+    )}
+
+    <ul class="mt-10 space-y-6">
+      {posts.map((post) => (
+        <li>
+          <a href={`/blog/${post.slug}`} class="group block">
+            <time class="text-xs font-mono text-faint">
+              {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+            </time>
+            <p class="mt-1 text-base font-medium group-hover:underline decoration-neutral-300 underline-offset-4">
+              {post.data.title}
+            </p>
+            {post.data.description && (
+              <p class="mt-1 text-sm text-faint">{post.data.description}</p>
+            )}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</Layout>

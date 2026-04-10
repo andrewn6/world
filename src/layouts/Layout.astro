@@ -1,58 +1,174 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
 
+const { title = "Andrew N", description = "Andrew Nijmeh" } = Astro.props;
+const year = new Date().getFullYear();
+---
 
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width" />
-	<link rel="icon" type="image/svg+xml" href="/headshot.jpg" />
-	<meta name="twitter:card" content="https://user-images.githubusercontent.com/59238070/209602858-215a81df-88b7-44e1-ab96-370671cb5f55.png"/>
-	<meta content="Andrew N" name='description'>
-	<title>Andrew N</title>
-  </head>
-  <body>
-	<slot></slot>
-  </body>
-  </html>
-  <style>
-	 @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
-  
-	:root {
-	  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
-	  --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
-	  --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
-  
-	  --color-text: hsl(12, 5%, 4%);
-	  --color-bg: #F5F3EB;
-	  --color-border: hsl(17, 24%, 90%);
-	}
-  
-	html {
-	  font-family: 'Karla', serif;
-	  font-size: var(--font-size-base);
-	  color: var(--color-text);
-	  background-color: var(--color-bg);
-	  overflow-x: hidden; /* Prevent horizontal scroll */
-	}
-  
-	* {
-	  box-sizing: border-box;
-	}
-  
-	body {
-	  margin: 0;
-	  padding: 0;
-	  overflow: auto;
-	  webkit-overflow-scrolling: touch;
-	  height: 100vh;
-	}
-  
-	:global(h1) {
-	  font-size: var(--font-size-xl);
-	}
-  
-	:global(h2) {
-	  font-size: var(--font-size-lg);
-	}
-  </style>
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/jpeg" href="/headshot.jpg" />
+  <meta name="description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+  <title>{title}</title>
+</head>
+<body class="bg-white text-ink antialiased">
+  <div class="mx-auto max-w-xl px-6 py-16 md:py-24 min-h-screen flex flex-col">
+    <nav class="flex items-center gap-6 text-sm mb-16 md:mb-24">
+      <a href="/" class="nav-link font-medium">Andrew N</a>
+      <div class="flex-1"></div>
+      <a href="/blog" class="nav-link text-faint">Writing</a>
+    </nav>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="mt-24 pt-8 border-t border-neutral-100 text-xs text-faint font-mono tracking-wide">
+      {year}
+    </footer>
+  </div>
+</body>
+</html>
+
+<style is:global>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background: #111;
+    color: #fff;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #111;
+    transition: width 0.25s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .prose {
+    line-height: 1.75;
+    color: #111;
+  }
+
+  .prose h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.025em;
+  }
+
+  .prose h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.015em;
+  }
+
+  .prose h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .prose p {
+    margin-bottom: 1.25rem;
+  }
+
+  .prose a {
+    color: #111;
+    text-decoration: underline;
+    text-decoration-color: #ccc;
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.2s ease;
+  }
+
+  .prose a:hover {
+    text-decoration-color: #111;
+  }
+
+  .prose ul, .prose ol {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+  }
+
+  .prose li {
+    margin-bottom: 0.375rem;
+  }
+
+  .prose blockquote {
+    border-left: 2px solid #e5e5e5;
+    padding-left: 1rem;
+    color: #666;
+    margin-bottom: 1.25rem;
+    font-style: italic;
+  }
+
+  .prose code {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 0.875em;
+    background: #f5f5f5;
+    padding: 0.15em 0.35em;
+    border-radius: 3px;
+  }
+
+  .prose pre {
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 1rem;
+    overflow-x: auto;
+    margin-bottom: 1.25rem;
+  }
+
+  .prose pre code {
+    background: none;
+    padding: 0;
+    font-size: 0.85em;
+  }
+
+  .prose hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 2rem 0;
+  }
+
+  .prose img {
+    max-width: 100%;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+  }
+</style>
